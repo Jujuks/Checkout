@@ -24,10 +24,10 @@ interface CardDetails {
 
 export default function ShoppingCart() {
   const initialCartItems: CartItem[] = [
-    { id: 1, name: 'Denim T-Shirt', ref: '007197456', color: 'Blue', qty: 2, price: 7500.00, img: 'https://via.placeholder.com/60' },
-    { id: 2, name: 'Denim Pants', ref: '011015233', color: 'Blue', qty: 3, price: 9000.00, img: 'https://via.placeholder.com/60' },
-    { id: 3, name: 'Sony Smartwatch', ref: '004822981', color: 'Black', qty: 1, price: 24500.00, img: 'https://via.placeholder.com/60' },
-    { id: 4, name: 'Cognac Oxford', ref: '035772962', color: 'Brown', qty: 1, price: 4500.00, img: 'https://via.placeholder.com/60' },
+    { id: 1, name: 'Denim T-Shirt', ref: '007197456', color: 'Blue', qty: 2, price: 7500.00, img: '/Products/CamisetaBlue.png' },
+    { id: 2, name: 'Denim Pants', ref: '011015233', color: 'Blue', qty: 3, price: 9000.00, img: '/Products/PantalonBlue.jpg' },
+    { id: 3, name: 'Sony Smartwatch', ref: '004822981', color: 'Black', qty: 1, price: 24500.00, img: '/Products/Reloj.png' },
+    { id: 4, name: 'Cognac Oxford', ref: '035772962', color: 'Brown', qty: 1, price: 4500.00, img: '/Products/Zapatos.png' },
   ];
 
   const [cartItems, setCartItems] = useState<CartItem[]>(initialCartItems);
@@ -70,8 +70,8 @@ export default function ShoppingCart() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8 font-sans">
-      <div className="w-full max-w-[1200px] bg-[#f8f9fa] flex shadow-2xl rounded-2xl overflow-hidden h-[800px]">
+    <div className="min-h-screen bg-gray-100 font-sans">
+      <div className="w-full h-screen bg-[#f8f9fa] flex shadow-2xl overflow-hidden">
         {/* Aquí renderizamos nuestros componentes hijos y les pasamos las Props */}
         <CartPanel 
           cartItems={cartItems} 
